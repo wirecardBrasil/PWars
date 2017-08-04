@@ -9,6 +9,21 @@
 .mdl-layout__drawer-button{
   background-color: #FE9F02 !important;
 }
+
+.result-list__card .mdl-card__title{
+  height: 100%;
+  padding: 0;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.result-list__card .mdl-card__title .mdl-card__title-text{
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 10px;
+  background-color: red;
+  width: 100%;
+}
 .pwa-header__logo{
   height: 40px;
   display: inline-block;
@@ -45,3 +60,43 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+/* O container geral define a perspectiva */  
+.flip-container { perspective: 1000; }  	
+
+/* vira os containers frente e verso quando o mouse passa em cima */
+.flip-container.--opened .flipper {  		
+  transform: rotateY(180deg);  	
+}    
+
+.--opened .front{
+  opacity: 0;
+}
+
+.--opened .back{
+  opacity: 1;
+}
+
+/* define a velocidade da transição */
+.flipper {  	
+  transition: 0.6s;  	
+  transform-style: preserve-3d;    	
+  position: relative;  
+}
+    
+/* esconde o verso durante a animação */
+.front, .back {  	
+  transition: all 200ms ease;
+  position: absolute;  	
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: 0;  	
+  left: 0;  
+}
+
+/* frente posicionada sobre o verso */
+.front { z-index: 2;  }    
+
+/* verso inicialmente escondido */
+.back { transform: rotateY(180deg); }

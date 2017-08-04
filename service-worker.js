@@ -17,6 +17,16 @@ var filesToCache = [
   '/images/icons/icon_152x152.png',
   '/images/icons/icon_192x192.png',
   '/images/icons/icon_256x256.png',
+  '/images/bg/1.jpg',
+  '/images/bg/2.jpg',
+  '/images/bg/3.jpg',
+  '/images/bg/4.jpg',
+  '/images/bg/5.jpg',
+  '/images/bg/6.jpg',
+  '/images/bg/7.jpg',
+  '/images/bg/8.jpg',
+  '/images/bg/9.jpg',
+  '/images/bg/10.jpg',
   '/styles/font.woff2'
 ];
 
@@ -46,16 +56,6 @@ self.addEventListener('activate', function(e) {
       }));
     })
   );
-  /*
-   * Fixes a corner case in which the app wasn't returning the latest data.
-   * You can reproduce the corner case by commenting out the line below and
-   * then doing the following steps: 1) load app for first time so that the
-   * initial New York City data is shown 2) press the refresh button on the
-   * app 3) go offline 4) reload the app. You expect to see the newer NYC
-   * data, but you actually see the initial data. This happens because the
-   * service worker is not yet activated. The code below essentially lets
-   * you activate the service worker faster.
-   */
   return self.clients.claim();
 });
 
