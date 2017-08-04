@@ -81,7 +81,21 @@
     })
   }
     
-  /*****************************************************************************
+  var showSnackbar = () => {
+    var snackbarContainer = document.querySelector('#demo-snackbar-example');
+    var data = {
+      message: 'You are offline',
+      timeout: 3000
+    };
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  }
+
+   window.addEventListener('offline', () => {
+    showSnackbar()
+    console.log('deu ruim')
+  });
+
+   /*****************************************************************************
    *
    * Event listeners for UI elements
    *
@@ -93,128 +107,6 @@
   // });
 
 
-  /*****************************************************************************
-   *
-   * Methods to update/refresh the UI
-   *
-   ****************************************************************************/
-
-  
-
-
-  /*****************************************************************************
-   *
-   * Methods for dealing with the model
-   *
-   ****************************************************************************/
-
-  /*
-   * Gets a forecast for a specific city and updates the card with the data.
-   * getForecast() first checks if the weather data is in the cache. If so,
-   * then it gets that data and populates the card with the cached data.
-   * Then, getForecast() goes to the network for fresh data. If the network
-   * request goes through, then the card gets updated a second time with the
-   * freshest data.
-   */
-  // app.getForecast = function(key, label) {
-  //   var statement = 'select * from weather.forecast where woeid=' + key;
-  //   var url = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' +
-  //       statement;
-  //   // TODO add cache logic here
-  //   if ('caches' in window) {
-  //     /*
-  //      * Check if the service worker has already cached this city's weather
-  //      * data. If the service worker has the data, then display the cached
-  //      * data while the app fetches the latest data.
-  //      */
-  //     caches.match(url).then(function(response) {
-  //       if (response) {
-  //         response.json().then(function updateFromCache(json) {
-  //           var results = json.query.results;
-  //           results.key = key;
-  //           results.label = label;
-  //           results.created = json.query.created;
-  //           app.updateForecastCard(results);
-  //         });
-  //       }
-  //     });
-  //   }
-  //   // Fetch the latest data.
-  //   var request = new XMLHttpRequest();
-  //   request.onreadystatechange = function() {
-  //     if (request.readyState === XMLHttpRequest.DONE) {
-  //       if (request.status === 200) {
-  //         var response = JSON.parse(request.response);
-  //         var results = response.query.results;
-  //         results.key = key;
-  //         results.label = label;
-  //         results.created = response.query.created;
-  //         app.updateForecastCard(results);
-  //       }
-  //     } else {
-  //       // Return the initial weather forecast since no data is available.
-  //       app.updateForecastCard(initialWeatherForecast);
-  //     }
-  //   };
-  //   request.open('GET', url);
-  //   request.send();
-  // };
-
-  // // Iterate all of the cards and attempt to get the latest forecast data
-  // app.updateForecasts = function() {
-  //   var keys = Object.keys(app.visibleCards);
-  //   keys.forEach(function(key) {
-  //     app.getForecast(key);
-  //   });
-  // };
-
-  // // TODO add saveSelectedCities function here
-  // // Save list of cities to localStorage.
-  // app.saveSelectedCities = function() {
-  //   var selectedCities = JSON.stringify(app.selectedCities);
-  //   localStorage.selectedCities = selectedCities;
-  // };
-
-  /*
-   * Fake weather data that is presented when the user first uses the app,
-   * or when the user has not saved any cities. See startup code for more
-   * discussion.
-   */
-  var initialWeatherForecast = {
-    key: '2459115',
-    label: 'New York, NY',
-    created: '2016-07-22T01:00:00Z',
-    channel: {
-      astronomy: {
-        sunrise: "5:43 am",
-        sunset: "8:21 pm"
-      },
-      item: {
-        condition: {
-          text: "Windy",
-          date: "Thu, 21 Jul 2016 09:00 PM EDT",
-          temp: 56,
-          code: 24
-        },
-        forecast: [
-          {code: 44, high: 86, low: 70},
-          {code: 44, high: 94, low: 73},
-          {code: 4, high: 95, low: 78},
-          {code: 24, high: 75, low: 89},
-          {code: 24, high: 89, low: 77},
-          {code: 44, high: 92, low: 79},
-          {code: 44, high: 89, low: 77}
-        ]
-      },
-      atmosphere: {
-        humidity: 56
-      },
-      wind: {
-        speed: 25,
-        direction: 195
-      }
-    }
-  };
   // TODO uncomment line below to test app with fake data
   // app.updateForecastCard(initialWeatherForecast);
 

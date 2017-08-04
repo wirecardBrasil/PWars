@@ -1,8 +1,8 @@
-// var dataCacheName = 'pwa-data13' + Math.random();
-// var cacheName = 'pwa-data13' + Math.random();
+var dataCacheName = 'pwa-data13' + Math.random();
+var cacheName = 'pwa-data13' + Math.random();
 
-var dataCacheName = 'pwa-data131';
-var cacheName = 'pwa-data131';
+// var dataCacheName = 'pwa-data131';
+// var cacheName = 'pwa-data131';
 
 var filesToCache = [
   '/',
