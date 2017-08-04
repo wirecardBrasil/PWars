@@ -1,6 +1,6 @@
 {
-  "name": "PWars",
-  "short_name": "PWars",
+  "name": "Star Wars",
+  "short_name": "Star Wars",
   "icons": [{
     "src": "images/icons/icon_128x128.png",
       "sizes": "128x128",
@@ -24,6 +24,6 @@
     }],
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#FE9F02",
-  "theme_color": "#2F3BA2"
+  "background_color": "#000000",
+  "theme_color": "#FFFFFF"
 }
