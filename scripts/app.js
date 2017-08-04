@@ -22,12 +22,13 @@
     var splits = char.url.split('/')
     var id = splits[splits.length-2]
     var gender = char.gender === 'male' ? 'masculino' : 'feminino'
-    console.log(id)
     return `<div class="flip-container" onclick="this.classList.toggle('--opened');">
       <div class="result-list__card demo-card-square mdl-card mdl-shadow--2dp flipper">
         <div class="front">
           <div class="mdl-card__title mdl-card--expand" style="background: url(images/bg/${id}.jpg)">
-            <h2 class="mdl-card__title-text">${char.name}</h2>
+            <div class="mdl-card__title-container">
+              <h2 class="mdl-card__title-text">${char.name}</h2>
+            </div>
           </div>
         </div>
         <div class="back">
@@ -49,6 +50,7 @@
         app.selectedItens = json.results
         app.previous = json.previous
         app.next = json.next
+        console.log(app.next)
         showResults()
       })
     }).catch((error) => {
