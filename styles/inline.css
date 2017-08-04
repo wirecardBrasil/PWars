@@ -26,7 +26,13 @@
   padding-left: 10px;
   font-size: 20px;
 }
-
+.mdl-card__supporting-text{
+  font-family: 'Andale mono';
+}
+.mdl-card__supporting-text p{
+  color: #3B4E5B;
+  margin-bottom: 0;
+}
 .mdl-card__title-container{
   position: absolute;
   bottom: 0;
@@ -70,8 +76,8 @@
   }
 }
 .result-list__card-label{
-  text-transform: uppercase;
   font-weight: bold;
+  color: #8890A8;
 }
 
 /* O container geral define a perspectiva */  

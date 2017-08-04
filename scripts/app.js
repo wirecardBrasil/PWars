@@ -33,10 +33,11 @@
         </div>
         <div class="back">
           <div class="mdl-card__supporting-text">
-            <p> <span class="result-list__card-label"> Altura: </span> ${char.height} cm </p>
-            <p> <span class="result-list__card-label"> Peso: </span> ${char.mass} kilos</p>
-            <p> <span class="result-list__card-label"> Gênero: </span> ${gender} </p>
-            <p> <span class="result-list__card-label"> Nascimento: </span> ${char.birth_year} </p>
+            <h5>${char.name}</h5>
+            <p> <span class="result-list__card-label"> Altura </span> ${char.height} cm </p>
+            <p> <span class="result-list__card-label"> Peso </span> ${char.mass} kilos</p>
+            <p> <span class="result-list__card-label"> Gênero </span> ${gender} </p>
+            <p> <span class="result-list__card-label"> Nascimento </span> ${char.birth_year} </p>
           </div>
         </div>
       </div>
