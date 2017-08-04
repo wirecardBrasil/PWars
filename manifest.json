@@ -21,6 +21,11 @@
       "src": "images/icons/icon_256x256.png",
       "sizes": "256x256",
       "type": "image/png"
+    },
+    {
+      "src": "images/icons/icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }],
   "start_url": "/index.html",
   "display": "standalone",
