@@ -1,6 +1,6 @@
 ![PWars](https://github.com/moip/PWars/raw/master/images/icons/icon_256x256.png)
 
-# PWasrs
+# PWars
 
 PWars is the first Moip PWA.
 
