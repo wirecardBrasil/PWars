@@ -56,6 +56,10 @@
         let flippers = document.querySelectorAll('.flip-container')
         Array.from(flippers).forEach(flip => {
           flip.addEventListener('click', function(event) {
+            if(this.classList.contains('--opened')){
+              this.classList.toggle('--opened');
+              return;
+            }
             flippers.forEach((e) => {
               e.classList.remove('--opened');
             });
@@ -75,7 +79,6 @@
     caches.match('https://swapi.co/api/people/?format=json')
     .then((res) => res.json())
     .then((json) => {
-      console.log(json.results)
       app.selectedItens = json.results
       showResults()
     })
