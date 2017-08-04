@@ -1,16 +1,21 @@
 .pwa-header{ 
-  background: rebeccapurple;
+  background: #FE9F02;
   color: white;
   padding: 10px;
 }
-
+.mdl-layout__header-row{
+  background-color: #FE9F02;
+}
+.mdl-layout__drawer-button{
+  background-color: #FE9F02 !important;
+}
 .pwa-header__logo{
   height: 40px;
   display: inline-block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 5px;
+  top: 10px;
 }
 
 .result-list{
@@ -26,6 +31,12 @@
   flex-grow: inherit;
 }
 
+
+@media screen and (max-width: 700px) {
+  .result-list__card{
+    flex-basis: 100%;
+  }
+}
 .result-list__card-label{
   text-transform: uppercase;
   font-weight: bold;

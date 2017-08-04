@@ -31,30 +31,39 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Weather PWA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="images/icons/icon_152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon_144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-  <header class="pwa-header">
-    <button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-      <i class="material-icons">more_vert</i>
-    </button>
 
-    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-        for="demo-menu-lower-left">
-      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Characters</li>
-      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Vehicles</li>
-      <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Planets</li>
-      <!-- <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li> -->
-      <li class="mdl-menu__item">Starships</li>
-    </ul>
-    <img class="pwa-header__logo" src="images/logo.png">
-  </header>
-  <section class="pwa-container">
-
-  </section>
+  
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header pwa-header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <img class="pwa-header__logo" src="images/logo.png">
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Star Wars</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Characters</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+          <section class="pwa-container">
+          </section>
+      </div>
+    </main>
+  </div>
   <!-- Uncomment the line below when ready to test with fake data -->
   <script src="scripts/app.js" async></script>
   <script src="scripts/material.js" async></script>

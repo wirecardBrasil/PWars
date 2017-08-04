@@ -1,5 +1,9 @@
-var dataCacheName = 'pwa-data13' + Math.random();
-var cacheName = 'pwa-data13' + Math.random();
+// var dataCacheName = 'pwa-data13' + Math.random();
+// var cacheName = 'pwa-data13' + Math.random();
+
+var dataCacheName = 'pwa-data131';
+var cacheName = 'pwa-data131';
+
 var filesToCache = [
   '/',
   '/index.html',
@@ -8,6 +12,11 @@ var filesToCache = [
   '/styles/inline.css',
   '/styles/material.css',
   '/images/logo.png',
+  '/images/icons/icon_128x128.png',
+  '/images/icons/icon_144x144.png',
+  '/images/icons/icon_152x152.png',
+  '/images/icons/icon_192x192.png',
+  '/images/icons/icon_256x256.png',
   '/styles/font.woff2'
 ];
 
@@ -62,7 +71,6 @@ self.addEventListener('fetch', function(e) {
         return fetch(e.request).then(function(response){
           // coloco a resposta no cache
           cache.put(e.request.url, response.clone());
-          console.log(cache)
           return response;
         });
       })
